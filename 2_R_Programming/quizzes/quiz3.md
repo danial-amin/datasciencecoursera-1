@@ -53,9 +53,9 @@ There will be an object names 'mtcars' in your workspace. You can find some info
 How can one calculate the average miles per gallon (mpg) by number of cylinders in the car (cyl)?
 
 ### Answer
-with(mtcars, tapply(mpg, cyl, mean))
-tapply(mtcars$mpg, mtcars$cyl, mean)
-sapply( split(mtcars$mpg, mtcars$cyl) , mean)
+- with(mtcars, tapply(mpg, cyl, mean))<br>
+- tapply(mtcars$mpg, mtcars$cyl, mean)<br>
+- sapply( split(mtcars$mpg, mtcars$cyl) , mean)<br>
 
 Question 4
 ----------
