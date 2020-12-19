@@ -45,10 +45,10 @@ gitDF = jsonlite::fromJSON(jsonlite::toJSON(json1))
 
 # Subset data.frame
 gitDF[gitDF$full_name == "jtleek/datasharing", "created_at"] 
-
-# Answer: 
-# 2013-11-07T13:25:07Z
 ```
+### Answer: 
+2013-11-07T13:25:07Z
+
 
 Question 2
 ----------
@@ -70,10 +70,9 @@ url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv"
 f <- file.path(getwd(), "ss06pid.csv")
 download.file(url, f)
 acs <- data.table::data.table(read.csv(f))
-
-# Answer: 
-query1 <- sqldf("select pwgtp1 from acs where AGEP < 50")
 ```
+### Answer:
+sqldf("select pwgtp1 from acs where AGEP < 50")
 
 Question 3
 ----------
@@ -83,9 +82,9 @@ unique(acs$AGEP)
 ```
 
 ```R
-# Answer
-# sqldf("select distinct AGEP from acs")
 ```
+### Answer:
+sqldf("select distinct AGEP from acs")
 
 Question 4
 ----------
@@ -100,10 +99,9 @@ connection <- url("http://biostat.jhsph.edu/~jleek/contact.html")
 htmlCode <- readLines(connection)
 close(connection)
 c(nchar(htmlCode[10]), nchar(htmlCode[20]), nchar(htmlCode[30]), nchar(htmlCode[100]))
-
-# Answer: 
-# 45 31 7 25
 ```
+### Answer:
+45 31 7 25
 
 Question 5
 ----------
@@ -125,7 +123,7 @@ colNames <- c("filler", "week", "filler", "sstNino12", "filler", "sstaNino12",
 d <- read.fwf(url, w, header = FALSE, skip = 4, col.names = colNames)
 d <- d[, grep("^[^filler]", names(d))]
 sum(d[, 4])
-
-# Answer: 
-# 32426.7
 ```
+### Answer: 
+32426.7
+
