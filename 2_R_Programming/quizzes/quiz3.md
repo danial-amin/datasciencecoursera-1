@@ -17,7 +17,7 @@ There will be an object called 'iris' in your workspace. In this dataset, what i
 
 ### Answer
 
-6.588
+7
 
 ```R
 # if you don't have data.table installed
@@ -53,11 +53,9 @@ There will be an object names 'mtcars' in your workspace. You can find some info
 How can one calculate the average miles per gallon (mpg) by number of cylinders in the car (cyl)?
 
 ### Answer
-```R
 with(mtcars, tapply(mpg, cyl, mean))
 tapply(mtcars$mpg, mtcars$cyl, mean)
 sapply( split(mtcars$mpg, mtcars$cyl) , mean)
-```
 
 Question 4
 ----------
@@ -66,7 +64,7 @@ Continuing with the 'mtcars' dataset from the previous Question, what is the abs
 
 ### Answer
 
-126.5779
+127
 
 ```R
 mtcars_dt <- as.data.table(mtcars)
